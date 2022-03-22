@@ -17,7 +17,9 @@ const UpcomingMoviePage = (props) => {
   } 
  const movies = data.results
   
-  
+ const mustWatch = movies.filter(m => m.mustWatch)
+ localStorage.setItem('mustWatch', JSON.stringify(mustWatch))
+ const addToWatchList = (movieId) => true; 
 
   
 
@@ -28,7 +30,8 @@ const UpcomingMoviePage = (props) => {
       action={(movie) => {
         return (
           <>
-            <AddToPlaylistIcon movie={movie} />
+            < AddToPlaylistIcon movie={movie} />
+            
           </>
         );
       }}
