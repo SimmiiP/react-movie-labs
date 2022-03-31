@@ -9,7 +9,7 @@ import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
-
+import MovieCredits from "../movieCredits";
 
 const root = {
     display: "flex",
@@ -72,6 +72,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
           </li>
         ))}
       </Paper>
+
       <Fab
         color="secondary"
         variant="extended"
@@ -84,10 +85,28 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
       >
         <NavigationIcon />
         Reviews
+      
       </Fab>
+      
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <MovieReviews movie={movie} />
       </Drawer>
+  
+      <Fab
+        color="secondary"
+        variant="extended"
+        onClick={() =>setDrawerOpen(true)}
+        sx={{
+          position: 'fixed',
+          bottom: '1em',
+          right: '10em'
+        }}
+      >
+
+        <NavigationIcon />
+        Credits
+      </Fab>
+
 
       </>
   );

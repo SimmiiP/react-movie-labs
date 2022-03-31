@@ -10,6 +10,7 @@ import MovieUpcomingPage from './pages/movieUpcomingPage';
 import {QueryClientProvider, QueryClient } from "react-query";
 import {ReactQueryDevtools} from 'react-query/devtools'
 import MoviesContextProvider from "./contexts/moviesContext";
+import MovieCreditPage from "./pages/movieCreditsPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/movies/:id" element={<MoviePage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={ <Navigate to="/" /> } />
+        <Route path="/credits/:id" element={<MovieCreditPage />} />
       </Routes>
       </MoviesContextProvider>
     </BrowserRouter>
