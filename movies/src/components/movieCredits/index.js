@@ -30,13 +30,13 @@ export default function MovieCredits({ movie }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {credits.map((c) => (
-            <TableRow key={c.id}>
+          {credits.map((r) => (
+            <TableRow key={removeEventListener.id}>
               <TableCell component="th" scope="row">
-                {c.job}
+                {r.job}
               </TableCell>
-              <TableCell >{c.name}</TableCell>
-              <TableCell >{c.character}</TableCell>
+              <TableCell >{r.name}</TableCell>
+              <TableCell >{r.character}</TableCell>
             </TableRow>
           ))}
         </TableBody>
