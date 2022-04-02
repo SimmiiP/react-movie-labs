@@ -22,7 +22,13 @@ const MoviesContextProvider = (props) => {
       newMustWatch = [...mustWatch, movie.id];
     }
     console.log (setMustWatch(newMustWatch))
-  }  
+  } 
+  
+  const removeFromWatchList = (movie) => {
+    setMustWatch( mustWatch.filter(
+      (mId) => mId !== movie.id
+    ) )
+  };
 
   // We will use this function in a later section
   const removeFromFavorites = (movie) => {
@@ -32,11 +38,11 @@ const MoviesContextProvider = (props) => {
   };
 
   const addToRated = (movie) => {
-    let newRated = [];
+    let newrated = [];
     if (!rated.includes(movie.id)){
-      newRated = [...rated, movie.id];
+      newrated = [...rated, movie.id];
     }
-    console.log (setRated(newRated))
+    console.log (setRated(newrated))
   }
 
   const removeFromRated = (movie) => {
@@ -54,7 +60,10 @@ const MoviesContextProvider = (props) => {
         removeFromFavorites,
         mustWatch,
         addToWatchList,
-        addToRated
+        removeFromWatchList,
+        rated,
+        addToRated,
+        removeFromRated
       }}
     >
       {props.children}

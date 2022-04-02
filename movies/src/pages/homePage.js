@@ -3,7 +3,9 @@ import { getMovies } from "../api/tmdb-api";
 import PageTemplate from '../components/templateMovieListPage';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
-import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
+import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
+import AddToPlaylistIcon from "../components/cardIcons/addToPlaylist";
+import AddToRatedIcon from "../components/cardIcons/addToRated";
 
 const HomePage = (props) => {
 
@@ -28,9 +30,14 @@ const HomePage = (props) => {
       title="Discover Movies"
       movies={movies}
       action={(movie) => {
-        return <AddToFavoritesIcon movie={movie} />
+        return <>
+        <AddToFavoritesIcon movie={movie} />
+        <AddToRatedIcon movie={movie} />
+        </>
       }}
+      
     />
+    
 );
 };
 

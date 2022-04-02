@@ -12,6 +12,7 @@ import {ReactQueryDevtools} from 'react-query/devtools'
 import MoviesContextProvider from "./contexts/moviesContext";
 import MovieCreditPage from "./pages/movieCreditsPage";
 import RatedMoviesPage from "./pages/ratedMoviesPage.js";
+import PlaylistMoviesPage from "./pages/moviePlaylistPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -38,6 +39,7 @@ const App = () => {
         <Route path="*" element={ <Navigate to="/" /> } />
         <Route path="/credits/:id" element={<MovieCreditPage />} />
         <Route path="/movies/rated" element={<RatedMoviesPage/>} />
+        <Route path="/movies/playlist" element={<PlaylistMoviesPage/>} />
       </Routes>
       </MoviesContextProvider>
     </BrowserRouter>
