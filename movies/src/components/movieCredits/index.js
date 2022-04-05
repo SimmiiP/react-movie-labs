@@ -11,14 +11,14 @@ import {getMovieCredits} from "../../api/tmdb-api";
 
 export default function MovieCredits({ movie }) {
   const [credits, setCredits] = useState([]);
-
+console.log(movie)
   useEffect(() => {
     getMovieCredits(movie.id).then((credits) => {
       setCredits(credits);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+ console.log(credits)
   return (
     <TableContainer component={Paper}>
       <Table sx={{minWidth: 550}} aria-label="credits table">
@@ -31,7 +31,7 @@ export default function MovieCredits({ movie }) {
         </TableHead>
         <TableBody>
           {credits.map((r) => (
-            <TableRow key={removeEventListener.id}>
+            <TableRow key={r.id}>
               <TableCell component="th" scope="row">
                 {r.job}
               </TableCell>

@@ -23,6 +23,7 @@ const chip = { margin: 0.5 };
 
 const MovieDetails = ({ movie }) => {  // Don't miss this!
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const [drawerOpen2, setDrawerOpen2] = useState(false);
 
   return (
     <>
@@ -95,7 +96,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
       <Fab
         color="secondary"
         variant="extended"
-        onClick={() =>setDrawerOpen(true)}
+        onClick={() =>setDrawerOpen2(true)}
         sx={{
           position: 'fixed',
           bottom: '1em',
@@ -107,6 +108,9 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         Credits
       </Fab>
 
+      <Drawer anchor="top" open={drawerOpen2} onClose={() => setDrawerOpen2(false)}>
+        <MovieCredits movie={movie} />
+      </Drawer>
 
       </>
   );
