@@ -35,7 +35,7 @@ const RatedMoviesPage = () => {
 
   return (
     <PageTemplate
-      title="Rated Movies"
+      title="Top Rated Movies"
       movies={movies}
       action={(movie) => {
         return (

@@ -33,6 +33,7 @@ const HomePage = (props) => {
         return <>
         <AddToFavoritesIcon movie={movie} />
         <AddToRatedIcon movie={movie} />
+
         </>
       }}
       

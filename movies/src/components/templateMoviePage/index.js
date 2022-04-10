@@ -6,6 +6,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import { getMovieImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
+import MovieFooter from "../footerMovie";
 
 const TemplateMoviePage = ({ movie, children }) => {
 
@@ -52,6 +53,8 @@ const TemplateMoviePage = ({ movie, children }) => {
           {children}
         </Grid>
       </Grid>
+
+
     </>
   );
 };
