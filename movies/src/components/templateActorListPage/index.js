@@ -29,6 +29,7 @@ function ActorListPageTemplate({ people, action }) {
           <FilterActorsCard
             onUserInput={handleChange}
             nameFilter={nameFilter}
+            
           />
         </Grid>
         <MovieActorList action={action} people={displayedPeople}></MovieActorList>

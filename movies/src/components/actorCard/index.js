@@ -34,11 +34,12 @@ export default function ActorCard({ people, action }) {
       <CardMedia
         sx={{ height: 500 }}
         image={
-         people.poster_path
-            ? `https://image.tmdb.org/t/p/w500/${people.poster_path}`
+         people.people_id
+            ? `https://image.tmdb.org/t/p/w500/${people.people_id}`
             : img
         }
       />
+
       <CardContent>
         <Grid container>
           <Grid item xs={6}>

@@ -31,7 +31,7 @@ const ActorsPage  = (props) => {
       action={(people) => {
         return (
           <>
-            < AddToPlaylistIcon people={people} />
+          
             
           </>
         );

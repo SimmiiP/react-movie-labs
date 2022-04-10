@@ -3,7 +3,8 @@
 Name: Oluwasimisola Popoola
 
 ## Overview.
-
+ 
+ This is an overview of Assignment one in which i add more functionality, new pages and buttons to the Web App.
 
 ### Features.
 
@@ -26,13 +27,15 @@ Non-applicable
 
 ## API Endpoints.
 
-+ Discover list of movies - discover/movie
-
 + Movie details - movie/:id
 
 + Movie genres - /genre/movie/list
 
 + Movie credits - credits/movie/:id
+
++ Popular actors - person/popular
+
++ Actors Photos - /person/{person_id}/images
 
 ## Routing.
 
@@ -42,5 +45,6 @@ Non-applicable
 
 + /movies/credits/:id - displays movie credits page
 
-## Independant Learning.
++ /movies/actors - displays popular actors page 
+
 
